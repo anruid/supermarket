@@ -12,12 +12,12 @@ function searchEffect(){
     var search = document.querySelector(".jd_search");
     // 2.获取当前屏幕滚动时，banner滚动初屏幕的距离
     window.onscroll = function(){
-        var offTop = document.documentElement.scrollTop;
-        // console.log(offTop);
+        var scrollTop =window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+        // console.log(scrollTop);
         var opacity = 0;
-        if( offTop <= bannerHeight){
+        if( scrollTop <= bannerHeight){
             // 3.计算出比例值，获取透明度，设置背景颜色样式
-            opacity = (offTop/bannerHeight).toFixed(1);
+            opacity = (scrollTop/bannerHeight).toFixed(1);
              // 设置样式
         search.style.backgroundColor = "rgba(233,35,34,"+opacity+")";
         }else{
