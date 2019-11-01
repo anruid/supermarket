@@ -15,13 +15,13 @@ function searchEffect(){
         var offTop = document.documentElement.scrollTop;
         // console.log(offTop);
         var opacity = 0;
-        if( offTop < bannerHeight){
+        if( offTop <= bannerHeight){
             // 3.计算出比例值，获取透明度，设置背景颜色样式
             opacity = offTop/bannerHeight;
              // 设置样式
         search.style.backgroundColor = "rgba(233,35,34,"+opacity+")";
         }else{
-            search.style.backgroundColor = "rgb(233,35,34)";
+            search.style.backgroundColor = "rgba(233,35,34,1)";
         }
        
     }
@@ -39,7 +39,7 @@ function timeBack(){
     var nowTime = myHour*60*60 + myMinute*60 + mySecond;
     console.log(nowTime);
     // 2.设置倒计时，以秒为单位
-     var totalTime = 20*60*60 - nowTime; //1*60*60
+     var totalTime = 23*60*60 - nowTime; //1*60*60
     //  3.开启定时器
      var timerId = setInterval(function(){
          totalTime--;
