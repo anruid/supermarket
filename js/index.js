@@ -17,7 +17,7 @@ function searchEffect(){
         var opacity = 0;
         if( offTop <= bannerHeight){
             // 3.计算出比例值，获取透明度，设置背景颜色样式
-            opacity = offTop/bannerHeight;
+            opacity = (offTop/bannerHeight).toFixed(1);
              // 设置样式
         search.style.backgroundColor = "rgba(233,35,34,"+opacity+")";
         }else{
@@ -37,7 +37,6 @@ function timeBack(){
     var myMinute = myDate.getMinutes();
     var mySecond = myDate.getSeconds();
     var nowTime = myHour*60*60 + myMinute*60 + mySecond;
-    console.log(nowTime);
     // 2.设置倒计时，以秒为单位
      var totalTime = 23*60*60 - nowTime; //1*60*60
     //  3.开启定时器
