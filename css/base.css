@@ -54,3 +54,6 @@ input{
     clear: both;
     visibility: hidden;
 }
+*{
+    cursor: pointer;
+}
