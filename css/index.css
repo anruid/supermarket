@@ -96,6 +96,7 @@
 }
 .jd_bannerImg{
     width: 800%;
+    position: relative;
 }
 .jd_bannerImg > li{
     width: 12.5%;
@@ -119,18 +120,22 @@
     transform: translate(-50%);
 }
 .jd_bannerIndicator > li{
-    width: 6px;
-    height: 6px;
-    border-radius: 3px;
-    border: 1px solid #fff;
+    /* display: inline-block; */
+    width: 8px;
+    height: 3px;
+    border-radius: 7px;
+    /* border: 1px solid #cccccc; */
+    background-color: hsla(0,0%,92.9%,0.4);
     float: left;
-    margin-left: 10px;
+    margin: 0 2px;
+    opacity: 1;
 }
 .jd_bannerIndicator > li:first-of-type{
     margin-left: 0;
 }
-.jd_bannerIndicator > li.ative{
-    background-color: #fff;
+.jd_bannerIndicator > li.active{
+    background-color: #ededed;
+    width: 12px;
 }
 
 /* 导航栏 */
